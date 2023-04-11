@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 
@@ -20,7 +21,7 @@ function Reactions() {
         aria-labelledby="Positive reaction button"
         onClick={onPositiveReaction}
       >
-        <Image src="./images/icon-plus.svg" aria-hidden="true" width={14} height={10}/>
+        <img src="./images/icon-plus.svg" aria-hidden="true" />
       </Button>
       <p className={styles.score}>{score}</p>
       <Button
@@ -28,8 +29,7 @@ function Reactions() {
         aria-labelledby="Negative reaction button"
         onClick={onNegativeReaction}
       >
-      <Image src="./images/icon-minus.svg" aria-hidden="true" width={14} height={5}/>
-
+        <img src="./images/icon-minus.svg" aria-hidden="true" />
       </Button>
     </div>
   );

@@ -6,15 +6,17 @@ import { Comment } from "../comment";
 import Data from "../../../data.json";
 import { CommentContextProvider } from "../comment/useComment";
 
+import styles from "./styles.module.scss"
+
 function Conversation() {
   return (
-    <div>
+    <div className={styles.conversationWrapper}>
       {Data.comments.map((comment) => (
         <CommentContextProvider  key={comment.id} data={{comment, currentUser: Data.currentUser}} >
         <Comment/>
         </CommentContextProvider>
       ))}
-      <NewCommentEditor />
+      {/* <NewCommentEditor /> */}
     </div>
   );
 }

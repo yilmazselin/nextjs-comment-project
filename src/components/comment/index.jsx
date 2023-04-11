@@ -4,15 +4,19 @@ import { Header } from "./header";
 import { Body } from "./body";
 import { useComment } from "./useComment";
 
+import styles from "./styles.module.scss"
+
 function Comment() {
   const comment = useComment();
 
 
   return (
-    <div>
+    <div className={styles.commentWrapper}>
       <Reactions />
-      <Header />
+     <div className={styles.commentContent}>
+     <Header />
       <Body />
+     </div>
     </div>
   );
 }
